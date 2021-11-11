@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: hidden !important;
+  font-family: 'Source Code Pro', monospace;
+}
+body * {
+  user-drag: none;
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1, 
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: "Urial" !important;
+}
