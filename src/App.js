@@ -33,6 +33,7 @@ function App() {
             data-tip="Dejé de escribir cuando hicieron de mi dolor<br/> un juego de palabras
             ininteligible,"
             data-background-color="#b23a3a"
+            data-place="right"
           >
             <span className="cr">.</span>
             <span className="cr">.</span>
