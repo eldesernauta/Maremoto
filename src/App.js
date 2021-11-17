@@ -3,11 +3,20 @@ import AnimatedCursor from "react-animated-cursor";
 import { Container, Button, Tooltip, OverlayTrigger } from "react-bootstrap";
 import ReactTooltip from "react-tooltip";
 
+var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (is_safari) {
+  const alert_div = document.getElementById("alert-if-safari");
+  alert_div.className = "alert alert-danger";
+  alert_div.innerHTML = "Sé una persona cool y abre este sitio en Chrome! :)";
+}
+
 function App() {
   return (
     <>
       <Container className="container containerG">
-        <div className="clmn1">          
+        <div role="alert" id="alert-if-safari"></div>
+
+        <div className="clmn1">
           <h1>
             <ul class="c-rainbow">
               <li class="c-rainbow__layer c-rainbow__layer--red">Maremoto</li>
@@ -25,7 +34,6 @@ function App() {
               <li class="c-rainbow__layer c-rainbow__layer--orange">
                 Maremoto
               </li>
-              
             </ul>
           </h1>
           <div
@@ -160,7 +168,8 @@ function App() {
         </div>
 
         <div className="footer">
-          Copyright © 2021 <a href="https://eldesernauta.com" >eldesernauta.com</a>
+          Copyright © 2021{" "}
+          <a href="https://eldesernauta.com">eldesernauta.com</a>
         </div>
 
         <ReactTooltip
