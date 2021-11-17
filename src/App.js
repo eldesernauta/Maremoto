@@ -89,6 +89,7 @@ function App() {
             poder cruzar, fría y en soledad, "
             data-background-color="#38b899"
             data-text-color="#191919"
+            data-place="top"
           >
             <span className="cb">.</span>
             <span className="cb">.</span>

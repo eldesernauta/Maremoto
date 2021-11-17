@@ -45,6 +45,11 @@ $bg_sm: url("../background_mobile.jpg");
   }
 }
 
+html{
+  max-height: 100vh !important;
+  overflow-y: hide !important;
+}
+
 :root {
   --color-background: #4a347e;
 
@@ -212,6 +217,7 @@ $bg_sm: url("../background_mobile.jpg");
       min-width: 65vw !important;
     }
     @include smartphone {
+      
       min-width: 60vw !important;
     }
   }
@@ -261,7 +267,7 @@ $bg_sm: url("../background_mobile.jpg");
       width: 30vw;
     }
     @include smartphone(){
-      min-width: 80vw;
+      min-width: 75vw;
     }
   }
 
@@ -281,6 +287,9 @@ $bg_sm: url("../background_mobile.jpg");
       &:hover + h2 {
         color: var(--color-blue) !important;
       }
+      @include smartphone() {
+        transform: translateY(-120px);
+      }
     }
     h2 {      
       transform: translateY(-45px);
@@ -291,6 +300,7 @@ $bg_sm: url("../background_mobile.jpg");
       @include smartphone() {
         font-size: 1.5rem;
         line-height: 1.5rem;
+        transform: translateY(-100px);
       }
     }
     @include md-desktop(){
@@ -307,7 +317,7 @@ $bg_sm: url("../background_mobile.jpg");
       width: 60vw;
     }
     @include smartphone(){
-      min-width: 120vw;
+      min-width: 100vw;
     }
   }
 
