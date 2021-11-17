@@ -70,7 +70,7 @@ $bg_sm: url("../background_mobile.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: left center;
-  height: 100vh;
+  max-height: 100vh;
   padding: 0px 50px;
   margin: 0px !important; 
   display: flex;
@@ -168,15 +168,21 @@ $bg_sm: url("../background_mobile.jpg");
       width: 80px;
       margin-top: -20px;
     }
+    @include md-desktop(){
+      min-width: 32vw !important;
+    }
     @include smartphone() {
-      min-width: 90vw;
+      min-width: 80vw;
     }
   }
 
   space1 {
     width: 35vw;
+    @include md-desktop(){
+      width: 30vw;
+    }
     @include smartphone(){
-      max-width: 0vw;
+      width: 0vw;
     }
   }
 
@@ -202,13 +208,19 @@ $bg_sm: url("../background_mobile.jpg");
         line-height: 1.5rem;
       }
     }
-    @include md-desktop {
-      min-width: 70vw;
+    @include md-desktop(){
+      min-width: 65vw !important;
+    }
+    @include smartphone {
+      min-width: 60vw !important;
     }
   }
 
   space2 {
     width: 70vw;
+    @include md-desktop(){
+      width: 60vw;
+    }
     @include smartphone(){
       min-width: 100vw;
     }
@@ -235,6 +247,9 @@ $bg_sm: url("../background_mobile.jpg");
         line-height: 1.5rem;
       }
     }
+    @include md-desktop(){
+      width: 60vw !important;
+    }
     @include smartphone {
       min-width: 60vw !important;
     }
@@ -242,8 +257,11 @@ $bg_sm: url("../background_mobile.jpg");
 
   space3 {
     width: 35vw;
+    @include md-desktop(){
+      width: 30vw;
+    }
     @include smartphone(){
-      min-width: 70vw;
+      min-width: 80vw;
     }
   }
 
@@ -275,12 +293,21 @@ $bg_sm: url("../background_mobile.jpg");
         line-height: 1.5rem;
       }
     }
+    @include md-desktop(){
+      width: 60vw !important;
+    }
+    @include smartphone {
+      min-width: 50vw !important;
+    }
   }
 
   space4 {
     width: 65vw;
+    @include md-desktop(){
+      width: 60vw;
+    }
     @include smartphone(){
-      min-width: 130vw;
+      min-width: 120vw;
     }
   }
 
@@ -303,13 +330,19 @@ $bg_sm: url("../background_mobile.jpg");
         line-height: 1.5rem;
       }
     }
+    @include md-desktop(){
+      width: 55vw !important;
+    }
     @include smartphone {
-      min-width: 60vw !important;
+      min-width: 50vw !important;
     }
   }
 
   space5 {
     width: 65vw;
+    @include md-desktop(){
+      width: 45vw;
+    }
     @include smartphone(){
       min-width: 100vw;
     }
@@ -335,13 +368,19 @@ $bg_sm: url("../background_mobile.jpg");
         line-height: 1.5rem;
       }
     }
+    @include md-desktop(){
+      width: 70vw !important;
+    }
     @include smartphone {
-      min-width: 80vw !important;
+      min-width: 90vw !important;
     }
   }
 
   space6 {
     width: 55vw;
+    @include md-desktop(){
+      width: 60vw;
+    }
     @include smartphone(){
       min-width: 130vw;
     }
@@ -357,7 +396,7 @@ $bg_sm: url("../background_mobile.jpg");
     h2 {
       text-orientation: sideways !important;
       margin: 0;
-      margin-left: 15vw;
+      margin-left: 10vw;
       
       writing-mode: vertical-rl;
       transform: rotate(180deg);
@@ -419,6 +458,10 @@ $bg_sm: url("../background_mobile.jpg");
         font-size: 3rem;
         transition: 0.3 ease-in-out;
       }
+
+      @include smartphone() {
+        font-size: 3rem;
+      }
     }
   }
 
@@ -443,6 +486,7 @@ $bg_sm: url("../background_mobile.jpg");
     color: #0f0f0f;
     transition: 1s ease-in-out;
     font-size: 3.5rem;
+
   }
 
   /* MEDIA QUERIES */
@@ -452,6 +496,7 @@ $bg_sm: url("../background_mobile.jpg");
     background: $bg_sm;
     background-size: cover;
     padding: 20px;
+    overflow-y: hidden !important;
   }
 }
 
