@@ -6,6 +6,8 @@
 }
 
 $root: ".c-rainbow";
+$bg_lg: url("../background.jpg");
+$bg_sm: url("../background_mobile.jpg");
 
 @mixin smartphone {
   @media (max-width: 480px) {
@@ -14,19 +16,31 @@ $root: ".c-rainbow";
 }
 
 @mixin tablets {
-  @media (min-width: 480px) and (max-width: 1023px) {
+  @media (min-width: 480px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin sm-desktop {
+  @media (min-width: 1024px) and (max-width: 1360px) {
     @content;
   }
 }
 
 @mixin md-desktop {
-  @media (min-width: 1024px) and (max-width: 1240px) {
+  @media (min-width: 1360px) and (max-width: 1440px) {
     @content;
   }
 }
 
 @mixin lg-desktop {
-  @media (min-width: 1440px) {
+  @media (min-width: 1440px) and (max-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin xl-desktop {
+  @media (min-width: 1920px) {
     @content;
   }
 }
@@ -51,13 +65,14 @@ $root: ".c-rainbow";
 }
 
 .container {
-  min-width: 13300px;
-  background-image: url(../background.jpg);
+  min-width: 700vw;
+  background-image: $bg_lg;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: left center;
   height: 100vh;
   padding: 0px 50px;
+  margin: 0px !important; 
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -153,15 +168,15 @@ $root: ".c-rainbow";
       width: 80px;
       margin-top: -20px;
     }
-    @include md-desktop {
-      min-width: 25vw;
+    @include smartphone() {
+      min-width: 90vw;
     }
   }
 
   space1 {
     width: 35vw;
-    @include md-desktop {
-      min-width: 30vw;
+    @include smartphone(){
+      max-width: 0vw;
     }
   }
 
@@ -182,6 +197,10 @@ $root: ".c-rainbow";
       &:hover {
         transition: 1s ease-in-out;
       }
+      @include smartphone() {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
     }
     @include md-desktop {
       min-width: 70vw;
@@ -190,8 +209,8 @@ $root: ".c-rainbow";
 
   space2 {
     width: 70vw;
-    @include md-desktop {
-      min-width: 65vw;
+    @include smartphone(){
+      min-width: 100vw;
     }
   }
 
@@ -211,16 +230,20 @@ $root: ".c-rainbow";
       &:hover {
         transition: 1s ease-in-out;
       }
+      @include smartphone() {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
     }
-    @include md-desktop {
-      min-width: 55vw;
+    @include smartphone {
+      min-width: 60vw !important;
     }
   }
 
   space3 {
     width: 35vw;
-    @include md-desktop {
-      min-width: 35vw;
+    @include smartphone(){
+      min-width: 70vw;
     }
   }
 
@@ -247,16 +270,17 @@ $root: ".c-rainbow";
       &:hover {
         transition: 1s ease-in-out;
       }
-    }
-    @include md-desktop {
-      min-width: 65vw;
+      @include smartphone() {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
     }
   }
 
   space4 {
     width: 65vw;
-    @include md-desktop {
-      min-width: 65vw;
+    @include smartphone(){
+      min-width: 130vw;
     }
   }
 
@@ -274,16 +298,20 @@ $root: ".c-rainbow";
     }
     h2 {
       margin: 0px;
+      @include smartphone() {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
     }
-    @include md-desktop {
-      min-width: 60vw;
+    @include smartphone {
+      min-width: 60vw !important;
     }
   }
 
   space5 {
     width: 65vw;
-    @include md-desktop {
-      min-width: 60vw;
+    @include smartphone(){
+      min-width: 100vw;
     }
   }
 
@@ -302,16 +330,20 @@ $root: ".c-rainbow";
     }
     h2 {
       margin: 0px;
+      @include smartphone() {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+      }
     }
-    @include md-desktop {
-      min-width: 55vw;
+    @include smartphone {
+      min-width: 80vw !important;
     }
   }
 
   space6 {
     width: 55vw;
-    @include md-desktop {
-      min-width: 65vw;
+    @include smartphone(){
+      min-width: 130vw;
     }
   }
 
@@ -414,21 +446,12 @@ $root: ".c-rainbow";
   }
 
   /* MEDIA QUERIES */
-
-  @include md-desktop() {
-    height: 100vh !important;
-    min-width: 1200vh;
+  @include smartphone{
+    max-height: 100vh !important;
+    min-width: 1100vw !important;
+    background: $bg_sm;
     background-size: cover;
-    overflow: hidden;
-    background-position-x: -10vw;
-  }
-  @include smartphone {
-    width: 100vw  !important;
-    height: 100vh !important;
-    background-size: cover;
-    overflow: hidden;
-    background-position-x: -130vw;
-    
+    padding: 20px;
   }
 }
 
@@ -477,6 +500,7 @@ $root: ".c-rainbow";
     var(--color-violet) 90%,
     var(--color-red) 100%
   );
+  
   max-height: 5px;
 }
 
@@ -487,6 +511,7 @@ $root: ".c-rainbow";
 }
 
 ::-webkit-scrollbar-thumb {
+  
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px 5px 0px 0px;
 }
