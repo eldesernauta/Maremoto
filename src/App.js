@@ -158,6 +158,10 @@ function App() {
           <AnimatedCursor color="200, 200, 200" />
         </div>
 
+        <div className="footer">
+          Copyright © 2021 <a href="https://eldesernauta.com" >eldesernauta.com</a>
+        </div>
+
         <ReactTooltip
           clickable="true"
           place="top"
