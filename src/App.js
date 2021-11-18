@@ -175,6 +175,7 @@ function App() {
         <ReactTooltip
           clickable="true"
           place="top"
+          scrollHide="true"
           multiline="true"
           delayShow="100"
         />
