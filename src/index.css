@@ -1,7 +1,14 @@
-body {
-  margin: 0;
-  padding: 0;
+.html, html{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body {  
+  background: url(./background_body.jpg);
+  background-size: cover;
+  margin: 0 !important;
+  padding: 0 !important;
   overflow-y: hidden !important;
+  overflow-x: scroll;
   font-family: 'Source Code Pro', monospace;
 }
 body * {

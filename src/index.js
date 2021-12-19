@@ -16,7 +16,6 @@ ReactDOM.render(
 
 //Scroll Horizontal
 
-if (window.innerWidth > 1024) {
 function transformScroll(event) {
   if (!event.deltaY) {
     return;
@@ -28,4 +27,3 @@ function transformScroll(event) {
 
 var element = document.scrollingElement || document.documentElement;
 element.addEventListener("wheel", transformScroll);
-}

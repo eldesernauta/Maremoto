@@ -3,11 +3,20 @@ import AnimatedCursor from "react-animated-cursor";
 import { Container, Button, Tooltip, OverlayTrigger } from "react-bootstrap";
 import ReactTooltip from "react-tooltip";
 
+var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+if (is_safari) {
+  const alert_div = document.getElementById("alert-if-safari");
+  alert_div.className = "alert alert-danger";
+  alert_div.innerHTML = "Sé una persona cool y abre este sitio en Chrome! :)";
+}
+
 function App() {
   return (
     <>
       <Container className="container containerG">
-        <div className="clmn1">          
+        <div role="alert" id="alert-if-safari"></div>
+
+        <div className="clmn1">
           <h1>
             <ul class="c-rainbow">
               <li class="c-rainbow__layer c-rainbow__layer--red">Maremoto</li>
@@ -25,7 +34,6 @@ function App() {
               <li class="c-rainbow__layer c-rainbow__layer--orange">
                 Maremoto
               </li>
-              
             </ul>
           </h1>
           <div
@@ -33,6 +41,7 @@ function App() {
             data-tip="Dejé de escribir cuando hicieron de mi dolor<br/> un juego de palabras
             ininteligible,"
             data-background-color="#b23a3a"
+            data-place="right"
           >
             <span className="cr">.</span>
             <span className="cr">.</span>
@@ -89,6 +98,7 @@ function App() {
             poder cruzar, fría y en soledad, "
             data-background-color="#38b899"
             data-text-color="#191919"
+            data-place="top"
           >
             <span className="cb">.</span>
             <span className="cb">.</span>
@@ -157,9 +167,15 @@ function App() {
           <AnimatedCursor color="200, 200, 200" />
         </div>
 
+        <div className="footer">
+          Copyright © 2021{" "}
+          <a href="https://eldesernauta.com">eldesernauta.com</a>
+        </div>
+
         <ReactTooltip
           clickable="true"
           place="top"
+          scrollHide="true"
           multiline="true"
           delayShow="100"
         />
