@@ -1,6 +1,6 @@
 import "./scss/app.scss";
 import AnimatedCursor from "react-animated-cursor";
-import { Container, Button, Tooltip, OverlayTrigger } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ReactTooltip from "react-tooltip";
 
 var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);

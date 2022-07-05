@@ -1,10 +1,8 @@
 import React from "react";
-import AnimatedCursor from "react-animated-cursor"
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import './fonts/urial/URIAL.otf';
-import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
   <React.StrictMode>
