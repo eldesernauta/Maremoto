@@ -1,6 +1,6 @@
 {
   "name": "maremoto",
-  "homepage":"http://maremoto.eldesernauta.com",
+  "homepage": "http://maremoto.eldesernauta.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,7 +13,7 @@
     "react-indiana-drag-scroll": "^2.1.0",
     "react-tooltip": "^4.2.21",
     "sass": "^1.43.4",
-    "web-vitals": "^1.1.2",
+    "web-vitals": "^2.1.4",
     "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "dotenv-webpack": "^7.1.0",
@@ -24,8 +24,7 @@
     "react-dom": "^18.1.0",
     "react-scripts": "5.0.1",
     "sass-loader": "^13.0.0",
-    "style-loader": "^3.3.1",
-    "web-vitals": "^2.1.4"
+    "style-loader": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -50,9 +49,8 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
-    ],
+    ]
   },
-  
   "devDependencies": {
     "css-minimizer-webpack-plugin": "^4.0.0",
     "webpack": "^5.73.0",
