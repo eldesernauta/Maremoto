@@ -74,6 +74,7 @@ module.exports = (env, argv) => {
                 {
                     test: /\.(jpe?g|png|ico|gif|svg)(\?[a-z0-9=.]+)?$/,
                     type: 'asset/resource',
+
                 },
 
             ],
@@ -92,8 +93,6 @@ module.exports = (env, argv) => {
         optimization: {
             minimize: true,
             minimizer: [
-                // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
-                // `...`,
                 new CssMinimizerPlugin(),
               ],
             
