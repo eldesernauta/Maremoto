@@ -19,11 +19,7 @@ module.exports = (env, argv) => {
         },
         resolve: {
             extensions: [".jsx", ".js", ".ttf", ".otf", ".sass", ".scss"],
-<<<<<<< HEAD
-            modules: ['node_modules'],
-=======
             modules: ['node_modules']
->>>>>>> 17f5691b5e8596ecf41d07bea93feaa48b827a14
         },
         devServer: {
             hot: true,
@@ -37,14 +33,10 @@ module.exports = (env, argv) => {
                     test: /\.(js|jsx)$/,
                     loader: 'babel-loader',
                     options: {
-<<<<<<< HEAD
-                        presets: ['@babel/preset-react']
-=======
                         presets: [
                             "@babel/preset-env",
                            ["@babel/preset-react", {"runtime": "automatic"}]
                         ]
->>>>>>> 17f5691b5e8596ecf41d07bea93feaa48b827a14
                     }
                 },
 
@@ -97,23 +89,14 @@ module.exports = (env, argv) => {
                 chunkFilename: 'src/styles/[id].css'
             }),
         ],
-<<<<<<< HEAD
-
-=======
->>>>>>> 17f5691b5e8596ecf41d07bea93feaa48b827a14
         optimization: {
             minimize: true,
             minimizer: [
                 // For webpack@5 you can use the `...` syntax to extend existing minimizers (i.e. `terser-webpack-plugin`), uncomment the next line
                 // `...`,
                 new CssMinimizerPlugin(),
-<<<<<<< HEAD
-            ],
-
-=======
               ],
             
->>>>>>> 17f5691b5e8596ecf41d07bea93feaa48b827a14
         },
         externals: {
             'jsdom': 'window',
