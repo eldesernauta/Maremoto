@@ -1,3 +1,4 @@
+import React from "react";
 import "./scss/app.scss";
 import AnimatedCursor from "react-animated-cursor";
 import { Container } from "react-bootstrap";
