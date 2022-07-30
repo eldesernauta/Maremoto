@@ -12,7 +12,7 @@ module.exports = (env, argv) => {
         entry: './index.js',
         output: {
             filename: isProduction
-                ? './bundle.[contenthash].js'
+                ? './bundle.js'
                 : './bundle.js',
             path: path.resolve(__dirname, "build"),
             publicPath: '/'
@@ -44,7 +44,7 @@ module.exports = (env, argv) => {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: './[name].[hash].[ext]',
+                        filename: './[name].[ext]',
                     }
 
                 },
