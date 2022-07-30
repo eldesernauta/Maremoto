@@ -19,20 +19,20 @@ function App() {
 
         <div className="clmn1">
           <h1>
-            <ul class="c-rainbow">
-              <li class="c-rainbow__layer c-rainbow__layer--red">Maremoto</li>
-              <li class="c-rainbow__layer c-rainbow__layer--violet">
+            <ul className="c-rainbow">
+              <li className="c-rainbow__layer c-rainbow__layer--red">Maremoto</li>
+              <li className="c-rainbow__layer c-rainbow__layer--violet">
                 Maremoto
               </li>
-              <li class="c-rainbow__layer c-rainbow__layer--background">
+              <li className="c-rainbow__layer c-rainbow__layer--background">
                 Maremoto
               </li>
-              <li class="c-rainbow__layer c-rainbow__layer--blue">Maremoto</li>
-              <li class="c-rainbow__layer c-rainbow__layer--green">Maremoto</li>
-              <li class="c-rainbow__layer c-rainbow__layer--yellow">
+              <li className="c-rainbow__layer c-rainbow__layer--blue">Maremoto</li>
+              <li className="c-rainbow__layer c-rainbow__layer--green">Maremoto</li>
+              <li className="c-rainbow__layer c-rainbow__layer--yellow">
                 Maremoto
               </li>
-              <li class="c-rainbow__layer c-rainbow__layer--orange">
+              <li className="c-rainbow__layer c-rainbow__layer--orange">
                 Maremoto
               </li>
             </ul>
@@ -49,7 +49,7 @@ function App() {
             <span className="cr">.</span>
           </div>
         </div>
-        <space1></space1>
+        <div className="space1"></div>
         <div className="clmn2">
           <div
             className="dots h2"
@@ -69,7 +69,7 @@ function App() {
           </h2>
         </div>
 
-        <space2></space2>
+        <div className="space2"></div>
 
         <div className="clmn3">
           <div
@@ -90,7 +90,8 @@ function App() {
           </h2>
         </div>
 
-        <space3></space3>
+       
+        <div className="space3"></div>
 
         <div className="clmn4">
           <div
@@ -107,8 +108,8 @@ function App() {
           </div>
           <h2>la cordillera.</h2>
         </div>
-
-        <space4></space4>
+        
+        <div className="space4"></div>
 
         <div className="clmn5">
           <div
@@ -129,7 +130,7 @@ function App() {
           </h2>
         </div>
 
-        <space5></space5>
+        <div className="space5"></div>
 
         <div className="clmn6">
           <div
@@ -151,7 +152,7 @@ function App() {
           </h2>
         </div>
 
-        <space6></space6>
+        <div className="space6"></div>
 
         <div className="clmn7">
           <div className="trnon"></div>
@@ -174,11 +175,11 @@ function App() {
         </div>
 
         <ReactTooltip
-          clickable="true"
+          clickable
           place="top"
-          scrollHide="true"
-          multiline="true"
-          delayShow="100"
+          scrollHide
+          multiline 
+          delayShow={100}
         />
       </Container>
     </>
