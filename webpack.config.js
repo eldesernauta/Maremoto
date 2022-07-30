@@ -12,8 +12,8 @@ module.exports = (env, argv) => {
         entry: './index.js',
         output: {
             filename: isProduction
-                ? './src/bundle.[contenthash].js'
-                : './src/bundle.js',
+                ? './bundle.[contenthash].js'
+                : './bundle.js',
             path: path.resolve(__dirname, "build"),
             publicPath: '/'
         },
@@ -44,7 +44,7 @@ module.exports = (env, argv) => {
                     test: /\.(woff|woff2|eot|ttf|otf)$/,
                     type: 'asset/resource',
                     generator: {
-                        filename: './src/fonts/[name].[hash].[ext]',
+                        filename: './[name].[hash].[ext]',
                     }
 
                 },
@@ -85,8 +85,8 @@ module.exports = (env, argv) => {
                 manifest: "./public/manifest.json"
             }),
             new MiniCssExtractPlugin({
-                filename: 'src/styles/[name].css',
-                chunkFilename: 'src/styles/[id].css'
+                filename: '[name].css',
+                chunkFilename: '[id].css'
             }),
         ],
         optimization: {
