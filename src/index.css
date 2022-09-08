@@ -1,15 +1,16 @@
-.html, html{
+.html,
+html {
   margin: 0 !important;
   padding: 0 !important;
 }
-body {  
+body {
   background: url(./background_body.jpg);
   background-size: cover;
   margin: 0 !important;
   padding: 0 !important;
   overflow-y: hidden !important;
   overflow-x: scroll;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 }
 body * {
   user-drag: none;
@@ -25,7 +26,7 @@ h3,
 h4,
 h5,
 h6,
-.h1, 
+.h1,
 .h2,
 .h3,
 .h4,
@@ -36,8 +37,7 @@ h6,
 
 /* SCROLLBAR */
 
-::-webkit-scrollbar-track, ::-moz-horizontal-scrollbar, .scroller {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+::-webkit-scrollbar {
   background: linear-gradient(
     90deg,
     var(--color-red) 0%,
@@ -52,18 +52,25 @@ h6,
     var(--color-violet) 90%,
     var(--color-red) 100%
   );
-  
   max-height: 5px;
 }
-
-::-webkit-scrollbar, ::-moz-horizontal-scrollbar, .scroller {
-  width: 10px;
-  max-height: 5px;
-  background-color: #f5f5f5;
+::-webkit-scrollbar-track{
+  background: linear-gradient(
+    90deg,
+    var(--color-red) 0%,
+    var(--color-orange) 10%,
+    var(--color-yellow) 20%,
+    var(--color-green) 30%,
+    var(--color-blue) 40%,
+    var(--color-blue) 50%,
+    var(--color-dark-blue) 60%,
+    var(--color-background) 70%,
+    var(--color-violet) 80%,
+    var(--color-violet) 90%,
+    var(--color-red) 100%
+  );
 }
-
-::-webkit-scrollbar-thumb, ::-moz-horizontal-scrollbar, .scroller {
-  
+::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 5px 5px 0px 0px;
 }
