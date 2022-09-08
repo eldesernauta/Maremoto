@@ -4,18 +4,11 @@ import AnimatedCursor from "react-animated-cursor";
 import { Container } from "react-bootstrap";
 import ReactTooltip from "react-tooltip";
 
-var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-if (is_safari) {
-  const alert_div = document.getElementById("alert-if-safari");
-  alert_div.className = "alert alert-danger";
-  alert_div.innerHTML = "Sé una persona cool y abre este sitio en Chrome! :)";
-}
 
 function App() {
   return (
     <>
       <Container className="container containerG">
-        <div role="alert" id="alert-if-safari"></div>
 
         <div className="clmn1">
           <h1>
